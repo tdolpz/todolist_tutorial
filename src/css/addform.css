@@ -1,0 +1,8 @@
+.input-task {
+  border: none;
+  border-color: var(--border-color);
+  border-radius: 4px;
+  width: auto;
+  background-color: var(--font-color-light) !important;
+  box-shadow: var(--box-shadow-button);
+}

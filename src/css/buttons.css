@@ -1,0 +1,83 @@
+.add-btn,
+.edit-btn,
+.save-btn,
+.remove-btn,
+.filter-btn,
+.cancel-btn,
+.reset-btn {
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-button);
+  min-width: 2rem;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & svg {
+    font-size: 0.6rem;
+  }
+  .done & {
+    opacity: 0.6;
+  }
+  @media screen and (min-width: 480px) {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+  }
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.add-btn {
+  background-color: var(--add-color);
+  color: var(--font-color-light);
+  @media screen and (min-width: 480px) {
+    padding: 0 2rem;
+  }
+}
+
+.save-btn {
+  background-color: var(--quaternary-color);
+  color: var(--font-color-light);
+}
+
+.edit-btn {
+  background-color: var(--tertiary-color);
+  color: var(--font-color-light);
+}
+
+.cancel-btn {
+  background-color: var(--cancel-color);
+  color: var(--font-color-light);
+  & svg {
+    font-size: 1.5rem;
+  }
+}
+
+.remove-btn {
+  color: var(--font-color-light);
+  background-color: var(--reset-color);
+}
+
+.reset-btn {
+  background-color: var(--reset-color);
+  color: var(--font-color-light);
+  /*var(--font-color-light);*/
+  margin-top: 1rem;
+}
+
+.filter-btn {
+  flex: 1;
+  font-size: 0.8rem;
+  &:active,
+  &:hover,
+  &.active {
+    background: #aaaaaa;
+    color: var(--font-color-dark);
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,230 @@
+/*** css reset ***/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*** css vars ***/
+:root {
+	/* fonts */
+	--base-font: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+	/* font colors */
+	--font-color-light: #ffffff;
+	--font-color-dark: #010004;
+
+	/* background colors */
+	--primary-color: rgb(63, 60, 214);
+	--primary-color-trans: rgba(63, 60, 214, 0.75);
+	--secondary-color: #eae8f5;
+	--tertiary-color: #2c2b2e;
+	--quaternary-color: #7948cb;
+
+	/* Button colors */
+	--edit-color: #010004;
+	--add-color: rgb(25, 241, 195);
+	--remove-color: rgb(212, 49, 125);
+	--reset-color: rgb(212, 49, 125);
+	--save-color: #7948cb;
+  --cancel-color: #999999;
+
+	/* Specials */
+	--box-shadow-black: 0 4px 5px rgba(12, 4, 11, 0.5);
+	--box-shadow-extra: 10px 12px 12px rgba(12, 4, 11, 0.5);
+	--box-shadow-button: 0 4px 5px rgba(22, 66, 175, 0.5);
+	--border-color: 1px solid #2b3272;
+	--transparent-background: rgba(244, 255, 248, 0);
+
+	/* Hintergrundbild */
+	--pc1: rgba(39, 39, 41, 0.8);
+	--pc2: rgba(109, 100, 109, 0.8);
+	--pc3: rgba(194, 151, 196, 0.8);
+	--pc4: rgba(221, 173, 203, 0.8);
+	--pc5: rgba(142, 226, 219, 0.8);
+	--pc6: rgba(135, 207, 248, 0.8);
+	--pc7: rgba(164, 170, 240, 0.8);
+	--pc8: rgba(210, 214, 250, 0.8);
+	--pc9: rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+	color: var(--font-color-light);
+	text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+body {
+	min-height: 100vh;
+	font-family: var(--base-font);
+	background: var(--font-color-light);
+	background-image: linear-gradient(
+			to right top,
+			var(--pc1),
+			var(--pc2),
+			var(--pc3),
+			/*var(--pc4),*/ /*var(--pc5),*/ /*var(--pc6),*/ var(--pc7),
+			var(--pc8),
+			var(--pc9)
+		),
+		url("../assets/pattern.webp");
+	background-size: cover;
+
+	padding: 1rem 0.5rem;
+	@media screen and (min-width: 480px) {
+		padding: 2rem 0.5rem;
+	}
+	@media screen and (min-width: 768px) {
+		padding: 4rem 0.5rem;
+	}
+}
+
+.page-wrap {
+	max-width: 700px;
+	margin: 0 auto;
+	min-height: calc(100vh - 2rem);
+	/*background-color: var(--primary-color);*/
+	padding: 0.75rem;
+	border: 1px solid var(--font-color-dark);
+	border-radius: 16px;
+	box-shadow: var(--box-shadow-extra);
+	background-color: var(--primary-color-trans);
+	/*
+  background-image: linear-gradient(
+    200deg,
+    rgb(241, 233, 240) 0%,
+    rgb(143, 20, 126) 30%,
+    rgb(143, 75, 117) 100%
+  );*/
+	@media screen and (min-width: 480px) {
+		width: 90%;
+		min-height: calc(100vh - 4rem);
+		padding: 1rem;
+	}
+	@media screen and (min-width: 768px) {
+		width: 80%;
+		padding: 2rem 1rem;
+		border-radius: 25px;
+		min-height: calc(100vh - 8rem);
+	}
+
+	@media screen and (min-width: 1024px) {
+		padding: 3rem 1rem;
+	}
+}
+
+header {
+	max-width: 600px;
+	margin: 0 auto;
+	color: var(--font-color-light);
+	padding: 0.5rem 0;
+	text-align: center;
+	border-radius: 8px;
+	margin-bottom: 1rem;
+	& h1 {
+		font-size: 1.2rem;
+	}
+	@media screen and (min-width: 480px) {
+		& h1 {
+			font-size: 1.6rem;
+		}
+	}
+	@media screen and (min-width: 768px) {
+		padding: 1rem 0 2rem 0;
+		& h1 {
+			font-size: 2rem;
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		padding: 0 0 2rem 0;
+	}
+}
+
+main {
+	flex: 1;
+	display: grid;
+	place-items: center;
+}
+
+.container-header {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto 1rem auto;
+	background: var(--transparent-background);
+	padding: 2rem 1rem;
+	border-radius: 8px;
+}
+
+.container-hallo {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto 1rem auto;
+	background: var(--secondary-color);
+	padding: 1rem 0.5rem;
+	border-radius: 8px;
+	box-shadow: var(--box-shadow-black);
+	@media screen and (min-width: 480px) {
+		padding: 1rem;
+	}
+	@media screen and (min-width: 768px) {
+		margin-bottom: 1.5rem;
+		padding: 2rem 1rem;
+	}
+}
+.container-hallo p {
+	text-align: center;
+	padding: 0.5rem 0.5rem;
+}
+.greetmessage {
+	margin-bottom: 1rem;
+}
+
+.container-new-todo form {
+	width: 100%;
+	max-width: 600px;
+	display: flex;
+	gap: 0.5rem;
+	& input {
+		flex: 1;
+		padding: 0 0.5rem;
+	}
+	@media screen and (min-width: 480px) {
+		gap: 0.75rem;
+	}
+}
+
+.task-list {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto 1rem auto;
+	display: flex;
+	flex-direction: column;
+	@media screen and (min-width: 768px) {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.container-footer {
+	width: 80%;
+	max-width: 500px;
+	margin: 1rem auto;
+	background: var(--transparent-background);
+	color: var(--font-color-light);
+	padding: 2rem;
+	border-radius: 6px;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	@media screen and (min-width: 768px) {
+		margin-bottom: 1.5rem;
+	}
+}
+
+.hide {
+	display: none !important;
+}
